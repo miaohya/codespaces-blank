@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <time.h>
 
+// random comment: this line was added for fun
 int add(int a, int b);
 
 int main(void) {

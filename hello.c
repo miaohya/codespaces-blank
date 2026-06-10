@@ -37,7 +37,7 @@ int main(void) {
     }
 
     for (int i = 0; i < 5; i++) {
-        freePointer[i] = i * 10;
+        freePointer[i] = 100 + rand() % 101; // random number from 100 to 200
         printf("freePointer[%d] = %d\n", i, freePointer[i]);
     }
 

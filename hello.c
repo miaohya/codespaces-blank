@@ -10,10 +10,14 @@ typedef struct {
 // random comment: this line was added for fun
 int add(int a, int b);
 
+// -----------------------------------------------------------------------------
+// main program
+// -----------------------------------------------------------------------------
 int main(void) {
     printf("Hello, world!\n");
     printf("This is a simple C program.\n");
 
+    // allocate memory for arrays
     int *numbers = malloc(20 * sizeof(int));
     if (numbers == NULL) {
         perror("malloc");

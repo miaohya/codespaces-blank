@@ -1,9 +1,8 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include <string.h>
 #include <time.h>
 
-typedef struct person {
+typedef struct {
     char name[50];
     int age;
 } Person;

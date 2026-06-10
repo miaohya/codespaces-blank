@@ -1,6 +1,12 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 #include <time.h>
+
+typedef struct person {
+    char name[50];
+    int age;
+} Person;
 
 // random comment: this line was added for fun
 int add(int a, int b);
@@ -35,6 +41,11 @@ int main(void) {
         freePointer[i] = i * 10;
         printf("freePointer[%d] = %d\n", i, freePointer[i]);
     }
+
+    Person sue;
+    strcpy(sue.name, "Sue");
+    sue.age = 20;
+    printf("Person: %s, Age: %d\n", sue.name, sue.age);
 
     free(freePointer); // free the pointer after use
     free(numbers);

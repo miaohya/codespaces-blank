@@ -15,6 +15,13 @@ int main(void) {
         return 1;
     }
 
+    int *freePointer = malloc(5 * sizeof *freePointer);
+    if (freePointer == NULL) {
+        perror("malloc");
+        free(numbers);
+        return 1;
+    }
+
     srand((unsigned) time(NULL));
     for (int i = 0; i < 20; i++) {
         numbers[i] = 100 + rand() % 101; // random number from 100 to 200
@@ -24,6 +31,12 @@ int main(void) {
         printf("numbers[%d] = %d\n", i, numbers[i]);
     }
 
+    for (int i = 0; i < 5; i++) {
+        freePointer[i] = i * 10;
+        printf("freePointer[%d] = %d\n", i, freePointer[i]);
+    }
+
+    free(freePointer); // free the pointer after use
     free(numbers);
     return 0;
 }
